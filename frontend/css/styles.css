@@ -1,0 +1,121 @@
+:root {
+  --color-primario: #2f6f4f;
+  --color-primario-hover: #25583f;
+  --color-error: #c0392b;
+  --color-texto: #1f2937;
+  --color-texto-suave: #6b7280;
+  --color-borde: #d1d5db;
+  --color-fondo: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-fondo);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--color-texto);
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta__titulo {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+.tarjeta__subtitulo {
+  margin: 0 0 1.75rem;
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+}
+
+.campo {
+  margin-bottom: 1.1rem;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.campo input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(47, 111, 79, 0.15);
+}
+
+.campo__error {
+  display: block;
+  min-height: 1.1em;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--color-error);
+}
+
+.mensaje-error {
+  background: #fdecea;
+  color: var(--color-error);
+  padding: 0.65rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.boton {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-primario);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton:hover:not(:disabled) {
+  background: var(--color-primario-hover);
+}
+
+.boton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.boton--secundario {
+  background: transparent;
+  color: var(--color-primario);
+  border: 1px solid var(--color-primario);
+}
+
+.boton--secundario:hover:not(:disabled) {
+  background: rgba(47, 111, 79, 0.08);
+}
+
+[hidden] {
+  display: none !important;
+}

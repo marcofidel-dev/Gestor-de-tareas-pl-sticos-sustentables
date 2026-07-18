@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de Tareas — Iniciar sesion</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="tarjeta">
+    <h1 class="tarjeta__titulo">Gestor de Tareas</h1>
+    <p class="tarjeta__subtitulo">Plasticos sostenibles — inicia sesion para continuar</p>
+
+    <form id="form-login" novalidate>
+      <p id="mensaje-error" class="mensaje-error" hidden></p>
+
+      <div class="campo">
+        <label for="correo">Correo electronico</label>
+        <input type="email" id="correo" name="correo" autocomplete="username" required />
+        <span id="error-correo" class="campo__error"></span>
+      </div>
+
+      <div class="campo">
+        <label for="contrasena">Contrasena</label>
+        <input type="password" id="contrasena" name="contrasena" autocomplete="current-password" required />
+        <span id="error-contrasena" class="campo__error"></span>
+      </div>
+
+      <button type="submit" id="btn-login" class="boton">Iniciar sesion</button>
+    </form>
+
+    <div id="bienvenida" hidden>
+      <p>Sesion iniciada como <strong id="bienvenida-correo"></strong>.</p>
+      <button type="button" class="boton boton--secundario" onclick="salir()">Cerrar sesion</button>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
